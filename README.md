@@ -1,1 +1,0 @@
-# claim christmas NFT
