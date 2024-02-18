@@ -1,0 +1,42 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    gap: 3rem;
+    padding: 10rem 10rem;
+    flex: 1;
+  }
+  
+  .main-container > h1 {
+    font-size: 14rem;
+    letter-spacing: -0.06em;
+    line-height: 0.8em;
+    text-align: left;
+    color: white;
+    max-width: 140rem;
+  }
+  
+  .main-container__subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 2.5rem;
+    letter-spacing: -0.2px;
+    text-align: left;
+  }
+  
+  @media screen and (max-width: 640px) {
+    .main-container{
+        padding: 3rem;
+    }
+    .main-container > h1 {
+      font-size: 9rem;
+      line-height: 1em;
+    }
+
+  
+    .main-container__subtitle {
+      font-size: 2rem;
+    }
+
+  }
+  

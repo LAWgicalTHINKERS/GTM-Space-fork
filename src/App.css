@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --background-color: #070b0d;
+  --color-overlay: rgba(255, 255, 255, 0.1);
+  --connect-wallet-hover-color: #1e53ba;
+  --primary-color: #377bff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  user-select: text;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-color);
+  margin: 0px;
+  font-family: Formular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 1.6rem;
+  background-image: url("./assets/images/bg.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 140rem;
+  min-height: 100vh;
+  margin: auto;
+}
+
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 50%;
+  }
+}
