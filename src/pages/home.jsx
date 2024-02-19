@@ -16,16 +16,21 @@ const Home = () => {
     <>
       <div className="main-container">
         <aside className="sidebar">
-          <div className="sidebar-icon" onClick={() => handleClick('info')}>
-            <FaHome />
+          <div  onClick={() => handleClick('info')}>
+            {/* <FaHome /> */}
+            <img className="sidebar-icon" src="home.svg" alt="Girl in a jacket"></img>
           </div>
           <div className="sidebar-icon" onClick={() => handleClick('game')}>
-            <FaGamepad />
+            {/* <FaGamepad /> */}
+            <img className="sidebar-icon" src="game.svg" alt="Girl in a jacket"></img>
+
           </div>
           <div className="sidebar-icon" onClick={() => handleClick('leaderboard')}>
-            <FaRegChartBar />
+            {/* <FaRegChartBar /> */}
+            <img className="sidebar-icon" src="podium.svg" alt="Girl in a jacket"></img>
+
           </div>
-        </aside>
+        </aside> 
         <main>
           {activePage === 'info' && <InfoPage />}
           {activePage === 'game' && <GamePage />}

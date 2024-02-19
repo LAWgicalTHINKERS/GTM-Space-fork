@@ -6,14 +6,20 @@
   }
   
   .header h1 {
-    font-size: 2em; /* Adjust the size as needed */
+    font-size: 3em; /* Adjust the size as needed */
     margin-bottom: 0.5em;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
   }
   
   .header p {
     font-size: 1.2em; /* Adjust the size as needed */
     max-width: 1500px;
+    color: black;
+    font-weight: 400;
     margin: 0 auto; /* Centers the text block */
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: black;
   }
   /* StepsSection.css */
   .steps-section {

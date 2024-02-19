@@ -48,8 +48,12 @@ const Header = () => {
         {
        
         (_balance) ?  
-        (<p className="balance">{_balance}</p>) : <p  className="balance">is Loading...</p>
+        (<div className="balance-div">
+          <p className="balance">{_balance}</p>
+          <img className="sidebar-icon" src="mars logo.png" alt="Girl in a jacket"></img>
+        </div>) : <p  className="balance"></p>
         }
+         
         <ConnectButton chainStatus="icon" />
       </div>
     </header>

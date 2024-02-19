@@ -19,7 +19,8 @@ const TableComponent = () => {
   }, []); 
 
   return (
-    <table>
+    <div className='outerTable'>
+      <table >
       <thead>
         <tr>
           <th>S/No</th>
@@ -37,6 +38,7 @@ const TableComponent = () => {
         ))}
       </tbody>
     </table>
+    </div>
   );
 };
 
