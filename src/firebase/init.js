@@ -2,13 +2,14 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
 
-  apiKey: "AIzaSyDITzzyr78xqNwV4f9jnsFJvXYdYoU-Tno",
-  authDomain: "gtmspace-998a6.firebaseapp.com",
-  projectId: "gtmspace-998a6",
-  storageBucket: "gtmspace-998a6.appspot.com",
-  messagingSenderId:"1088679035978",
-  appId: "1:1088679035978:web:5231d2116a06a1eb1d52b3",
-  databaseURL: `https://gtmspace-998a6.firebaseio.com`,
+  apiKey: "AIzaSyDNT6boX6SzM60b4hrigplhDiwL8gpVNvc",
+  authDomain: "gtm-space.firebaseapp.com",
+  projectId: "gtm-space",
+  storageBucket: "gtm-space.appspot.com",
+  messagingSenderId:"543339488272",
+  appId: "1:543339488272:web:556ea799a767c742f51695",
+  measurementId: "G-NYV9H41HB1",
+  databaseURL: `https://gtm-space.firebaseio.com`,
 };
 
 const app = initializeApp(firebaseConfig);
