@@ -71,4 +71,18 @@
   transform: scale(1.2);
 }
 
+.header-button__container
+[data-testid="rk-connect-button"]:is(::before, ::after) {
+display: none;
+}
+
+.header-button__container [data-testid="rk-connect-button"]:hover {
+background-color: var(--connect-wallet-hover-color);
+transform: scale(1);
+}
+
+.icon{
+  width: 24px;
+}
+
 

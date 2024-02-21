@@ -8,12 +8,25 @@ import { ethers } from "ethers";
 import { Link } from "react-router-dom";
 import { useGetBalance } from "../hooks/useGetBalance";
 import { useAccount } from "wagmi";
+import { useEffect, useState } from "react";
 
 const Header = () => {
   const { address } = useAccount();
+  const [isConnected, setIsConnected] = useState(false); 
   console.log(address)
   const _balance = useGetBalance(address);
   console.log("Balance:",_balance)
+  useEffect(() => {
+    // Check if the account address is available
+    if (address) {
+      console.log("Account Address:", address);
+      console.log("Balance:", _balance);
+      setIsConnected(true)
+    } else {
+      console.log("No account connected.");
+      setIsConnected(false)
+    }
+  }, [address, _balance]); // Run this effect whenever address or balance changes
 
   return (
     <header className="header-container">
@@ -47,7 +60,7 @@ const Header = () => {
         </a>
         {
        
-        (_balance) ?  
+        (_balance && isConnected) ?  
         (<div className="balance-div">
           <p className="balance">{_balance}</p>
           <img className="sidebar-icon" src="mars logo.png" alt="Girl in a jacket"></img>

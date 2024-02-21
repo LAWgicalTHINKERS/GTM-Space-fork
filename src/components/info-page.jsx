@@ -14,7 +14,7 @@ const InfoPage = () => {
   return (
     <>
     <header className="header">
-      <h1>Welcome to GTM Space Station</h1>
+      <h1>WELCOME TO GTM SPACE STATION</h1>
       <p>
         Embark on an Interstellar Adventure! Explore a universe of captivating
         games, earn GTM tokens, ascend the leaderboard, and reap rewards in
