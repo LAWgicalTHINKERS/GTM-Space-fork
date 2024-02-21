@@ -29,13 +29,20 @@ const TableComponent = () => {
         </tr>
       </thead>
       <tbody>
-        {data.map((item, index) => (
-          <tr key={index}>
-            <td>{index + 1}</td>
-            <td>{item.walletAddress}</td>
-            <td>{item.gameScore}</td>
+        {
+          data.length > 0 ? data.map((item, index) => (
+            <tr key={index}>
+              <td>{index + 1}</td>
+              <td>{item.walletAddress}</td>
+              <td>{item.gameScore}</td>
+            </tr>
+          )) : <tr>
+            <td></td>
+            <td>Loading....</td>
+            <td></td>
           </tr>
-        ))}
+        }
+        
       </tbody>
     </table>
     </div>

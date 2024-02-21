@@ -5,6 +5,7 @@ const StepCard = ({ stepNumber, description }) => {
   return (
     <div className="step-card">
       <h3>STEP {stepNumber}</h3>
+      <div className="red-line"></div>
       <p>{description}</p>
     </div>
   );
@@ -14,7 +15,7 @@ const InfoPage = () => {
   return (
     <>
     <header className="header">
-      <h1>WELCOME TO GTM SPACE STATION</h1>
+      <h1>Welcome to GTM Space Station</h1>
       <p>
         Embark on an Interstellar Adventure! Explore a universe of captivating
         games, earn GTM tokens, ascend the leaderboard, and reap rewards in

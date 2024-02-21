@@ -1,60 +1,62 @@
+.back-button {
+  position: absolute;
+  width: 40px;
+  padding: 5px;
+  border-radius: 5px;
+  background: #ffffff;
+  top: 20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  z-index: 999; /* Ensure the button is above other elements */
+}
+.back-button .icon{
+  width: 95%;
+  height: 80%;
+}
 .game-page-container {
-    position: relative;
-    /* background: url('path-to-your-background-image.jpg') no-repeat center center; */
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    padding: 10px;
-  }
-  
-  .back-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    color: #fff;
-  }
-  
-  .game-title {
-    text-align: center;
-    color: #fff;
-  }
-  
-  .game-page-container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  .back-button {
-    position: absolute;
-    top: 20px; /* Adjust as needed */
-    left: 20px; /* Adjust as needed */
-    z-index: 999; /* Ensure the button is above other elements */
-  }
-  
-  .game-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none; /* Optional: Remove border */
-  }
-  
-  .wallet-info {
-    position: absolute; 
-    top: 20px;
-    right: 20px;
-    color: #fff;
-    text-align: right;
-  }
-  
-  .coin-count {
-    font-size: 1.5em;
-    display: block;
-  }
-  
-  .wallet-address {
-    display: block;
-  }
+  position: relative;
+  /* background: url('path-to-your-background-image.jpg') no-repeat center center; */
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+}
+
+.game-title {
+  text-align: center;
+  color: #fff;
+}
+
+.game-page-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+
+.game-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; /* Optional: Remove border */
+}
+
+.wallet-info {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  text-align: right;
+}
+
+.coin-count {
+  font-size: 1.5em;
+  display: block;
+}
+
+.wallet-address {
+  display: block;
+}

@@ -1,9 +1,7 @@
 import "./Header.css";
 import Logo from "../assets/images/logo.png";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import OpenSeaLogo from "../assets/images/opensea-logo.svg";
-import TelegramLogo from "../assets/images/telegram-logo.svg";
-import XLogo from "../assets/images/x-logo.png";
+
 import { ethers } from "ethers";
 import { Link } from "react-router-dom";
 import { useGetBalance } from "../hooks/useGetBalance";
@@ -12,19 +10,18 @@ import { useEffect, useState } from "react";
 
 const Header = () => {
   const { address } = useAccount();
-  const [isConnected, setIsConnected] = useState(false); 
-  console.log(address)
+  const [isConnected, setIsConnected] = useState(false);
   const _balance = useGetBalance(address);
-  console.log("Balance:",_balance)
+  console.log("Balance:", _balance);
   useEffect(() => {
     // Check if the account address is available
     if (address) {
       console.log("Account Address:", address);
       console.log("Balance:", _balance);
-      setIsConnected(true)
+      setIsConnected(true);
     } else {
       console.log("No account connected.");
-      setIsConnected(false)
+      setIsConnected(false);
     }
   }, [address, _balance]); // Run this effect whenever address or balance changes
 
@@ -32,42 +29,25 @@ const Header = () => {
     <header className="header-container">
       <a target="_blank" rel="noreferrer">
         <Link to="/home">
-        <img src={Logo} alt="Morty Logo" className="logo" />
+          <img src={Logo} alt="Morty Logo" className="logo" />
         </Link>
       </a>
+      <p className="middle">THE SPACE STATION</p>
       <div className="header-button__container">
-        <a target="_blank" rel="noreferrer">
-          <img
-            src="https://colonizemars.space/static/media/etherscan-icon.4f08739b276ab5d56fbda46f3f58559d.svg"
-            alt="x-logo"
-          />
-        </a>
-        <a target="_blank" rel="noreferrer">
-          <img
-            src="https://colonizemars.space/static/media/dextools.604cf965e98038840b306471abd1b7b9.svg"
-            alt="x-logo"
-          />
-        </a>
-        <a target="_blank" rel="noreferrer">
-          <img src={XLogo} alt="x-logo" />
-        </a>
-        <a target="_blank" rel="noreferrer">
-          <img src={TelegramLogo} alt="telegram-logo" />
-        </a>
+        {_balance && isConnected ? (
+          <div className="balance-div">
+            <p className="balance">{_balance}</p>
+            <img
+              className="sidebar-icon"
+              src="mars logo.png"
+              alt="Girl in a jacket"
+            ></img>
+          </div>
+        ) : (
+          <p className="balance"></p>
+        )}
 
-        <a target="_blank" rel="noreferrer">
-          <img src={OpenSeaLogo} alt="open-sea-logo" />
-        </a>
-        {
-       
-        (_balance && isConnected) ?  
-        (<div className="balance-div">
-          <p className="balance">{_balance}</p>
-          <img className="sidebar-icon" src="mars logo.png" alt="Girl in a jacket"></img>
-        </div>) : <p  className="balance"></p>
-        }
-         
-        <ConnectButton chainStatus="icon" />
+        <ConnectButton showBalance={false} chainStatus="icon" />
       </div>
     </header>
   );

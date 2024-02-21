@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./home.css";
+import Header from "../components/Header.jsx";
 import { FaHome, FaRegChartBar, FaGamepad } from "react-icons/fa";
 import GamePage from "../components/game-page.jsx";
 import InfoPage from "../components/info-page.jsx";
@@ -14,10 +15,12 @@ const Home = () => {
 
   return (
     <>
+     <Header />
       <div className="main-container">
         <aside className="sidebar">
-          <div  onClick={() => handleClick('info')}>
+          <div className='icon-box' onClick={() => handleClick('info')}>
             {/* <FaHome /> */}
+            <div className="side-box"></div>
             <img className="sidebar-icon" src="home.svg" alt="Girl in a jacket"></img>
           </div>
           <div className="sidebar-icon" onClick={() => handleClick('game')}>

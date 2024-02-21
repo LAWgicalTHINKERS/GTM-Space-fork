@@ -2,10 +2,7 @@ import React from "react";
 import GameCard from "../components/game-card";
 import "./game-page.css";
 
-
 const GamePage = () => {
-
-
   const games = [
     {
       name: "GTM Clash of Space",

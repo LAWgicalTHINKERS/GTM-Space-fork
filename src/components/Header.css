@@ -1,64 +1,73 @@
 .header-container {
-    align-items: center;
-    display: flex;
-    width: 100%;
-  }
-  
+  align-items: center;
+  display: flex;
+  width: 100%;
+  padding: 10px 10px 0px 10px;
+}
+.header-container .middle {
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-left: 20%;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
+}
+.header-container .logo {
+  width: 18rem;
+  height: 6rem;
+}
+
+.header-button__container {
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  flex: 1;
+  gap: 1.2rem;
+}
+
+.header-button__container > a {
+  width: 3rem;
+  height: 3rem;
+}
+
+.header-button__container > a > img {
+  width: 100%;
+  height: 100%;
+}
+
+.header-button__container [data-testid="rk-connect-button"] {
+  padding: 0.75rem 1.25rem;
+  border: thin solid var(--color-overlay);
+  font-size: 1.55rem;
+  transition: background-color 0.2s;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: normal;
+}
+
+.header-button__container
+  [data-testid="rk-connect-button"]:is(::before, ::after) {
+  display: none;
+}
+
+.header-button__container [data-testid="rk-connect-button"]:hover {
+  background-color: var(--connect-wallet-hover-color);
+  transform: scale(1);
+}
+
+@media screen and (max-width: 640px) {
   .header-container .logo {
-    width: 18rem;
-    height: 6rem;
+    width: 14rem;
+    height: 5rem;
   }
-  
-  .header-button__container {
-    justify-content: flex-end;
-    align-items: center;
-    display: flex;
-    flex: 1;
-    gap: 1.2rem;
-  }
-  
+
   .header-button__container > a {
-    width: 3rem;
-    height: 3rem;
-  }
-  
-  .header-button__container > a > img {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .header-button__container [data-testid="rk-connect-button"] {
-    padding: 0.75rem 1.25rem;
-    border: thin solid var(--color-overlay);
-    font-size: 1.55rem;
-    transition: background-color 0.2s;
-    border-radius: 10px;
-    font-family: "Inter", sans-serif;
-    font-weight: normal;
-  }
-  
-  .header-button__container
-    [data-testid="rk-connect-button"]:is(::before, ::after) {
     display: none;
   }
-  
-  .header-button__container [data-testid="rk-connect-button"]:hover {
-    background-color: var(--connect-wallet-hover-color);
-    transform: scale(1);
-  }
-  
-  @media screen and (max-width: 640px) {
-    .header-container .logo {
-      width: 14rem;
-      height: 5rem;
-    }
-  
-    .header-button__container > a {
-      display: none;
-    }
-  }
-  
-.balance{
+}
+
+.balance {
   color: rgb(6, 6, 6);
   font-size: 2.5rem;
 
@@ -67,7 +76,7 @@
   -webkit-text-stroke-color: black;
 }
 
-.balance-div{
+.balance-div {
   border-radius: 3px;
   background-color: #ffffff;
   display: flex;
@@ -77,5 +86,3 @@
   padding-top: 3px;
   padding-bottom: 3px;
 }
-
-
