@@ -42,7 +42,7 @@ const Header = () => {
             <p className="balance">{_balance}</p>
             <img
               className="sidebar-icon"
-              src="mars logo.png"
+              src="mars-logo.png"
               alt="Girl in a jacket"
             ></img>
           </div>
