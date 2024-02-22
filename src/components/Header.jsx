@@ -34,7 +34,7 @@ const Header = () => {
         </a>
       </div>
       <div className="">
-        <p className="middle">THE SPACE STATION</p>
+        <p className={_balance && isConnected ? "middle-2" : "middle-1"}>THE SPACE STATION</p>
       </div>
       <div className="header-button__container">
         {_balance && isConnected ? (

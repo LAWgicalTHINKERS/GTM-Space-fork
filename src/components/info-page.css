@@ -1,4 +1,6 @@
+.container{
 /* Header.css */
+}
 .header {
   color: #fff; /* Replace with actual color */
   text-align: left;
@@ -9,14 +11,15 @@
   font-size: 50px; /* Adjust the size as needed */
   font-weight: 800;
   margin-bottom: 0.5em;
+  letter-spacing: 1px;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }
 
 .header p {
   font-size: 24px; /* Adjust the size as needed */
-  max-width: 1500px;
   font-weight: 600;
+  letter-spacing: 0.2px;  
   margin: 0 auto; /* Centers the text block */
   -webkit-text-stroke-width: 0.3px;
   -webkit-text-stroke-color: black;
@@ -40,6 +43,7 @@
 .step-card h3 {
   color: #333; /* Replace with actual color */
   font-size: 30px;
+  letter-spacing: 1.2px;  
   font-weight: 800; /* Adjust the size as needed */
 }
 .red-line {

@@ -14,14 +14,21 @@
   height: auto;
 }
 
-.middle {
+.middle-2 {
   color: #ffffff;
   font-size: 48px;
   width: 530px;
   font-weight: 800;
   letter-spacing: 2px;
-  margin-left: 4%;
-  margin-right: 8%;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;/* Change to desired text color */
+}
+.middle-1 {
+  color: #ffffff;
+  font-size: 48px;
+  width: 530px;
+  font-weight: 800;
+  letter-spacing: 2px;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000000;/* Change to desired text color */
 }

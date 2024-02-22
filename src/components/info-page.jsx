@@ -14,6 +14,7 @@ const StepCard = ({ stepNumber, description }) => {
 const InfoPage = () => {
   return (
     <>
+    <div className="container">
     <header className="header">
       <h1>Welcome to GTM Space Station</h1>
       <p>
@@ -33,6 +34,8 @@ const InfoPage = () => {
         description="Every week top 10 of the leaderboard will be rewarded"
       />
     </section>
+    </div>
+
   </>
   )
 }

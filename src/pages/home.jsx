@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./home.css";
 import Header from "../components/Header.jsx";
-import { FaHome, FaRegChartBar, FaGamepad } from "react-icons/fa";
 import GamePage from "../components/game-page.jsx";
 import InfoPage from "../components/info-page.jsx";
 import LeaderBoard from "../components/leaderboard.jsx";
@@ -43,7 +42,7 @@ const Home = () => {
             ></img>
           </div>
         </aside>
-        <main>
+        <main className="right-box">
           {activePage === "info" && <InfoPage />}
           {activePage === "game" && <GamePage />}
           {activePage === "leaderboard" && <LeaderBoard />}
