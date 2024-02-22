@@ -1,3 +1,22 @@
+.container{
+  padding: 1rem;
+}
+
+.outerTable {
+  background-color: white;
+  width: 110vh;
+  padding: 10px;
+  border-radius: 6px;
+} 
+h1{
+  color: #fff; /* Replace with actual color */
+  text-align: left;
+  font-family: poppins;
+  font-weight: 800;
+  font-size: 50px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
 table {
   width: 100%;
   border-collapse: collapse;
@@ -9,16 +28,11 @@ th,
 td {
   padding: 8px;
   margin-top: 10px;
+  font-family: poppins;
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
 
-.outerTable {
-  background-color: white;
-  width: 110vh;
-  padding: 10px;
-  border-radius: 6px;
-}
 
 th {
   background-color: #f2f2f2;

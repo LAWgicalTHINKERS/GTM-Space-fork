@@ -1,5 +1,5 @@
-.container{
-/* Header.css */
+.container {
+  height: 100%;
 }
 .header {
   color: #fff; /* Replace with actual color */
@@ -10,7 +10,8 @@
 .header h1 {
   font-size: 50px; /* Adjust the size as needed */
   font-weight: 800;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.02em;
+  font-family: poppins;
   letter-spacing: 1px;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
@@ -19,20 +20,22 @@
 .header p {
   font-size: 24px; /* Adjust the size as needed */
   font-weight: 600;
-  letter-spacing: 0.2px;  
+  font-family: poppins;
+  letter-spacing: 0.2px;
   margin: 0 auto; /* Centers the text block */
   -webkit-text-stroke-width: 0.3px;
   -webkit-text-stroke-color: black;
 }
 /* StepsSection.css */
 .steps-section {
+  height: 75%;
   display: flex;
   justify-content: space-around;
 }
 
 .step-card {
-  width: 250px;
-  height: 250px; /* Adjust the width as needed */
+  width: 25%;
+  height: 70%; /* Adjust the width as needed */
   padding: 30px 40px;
   background-color: #fff; /* Replace with the actual background color */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -41,9 +44,10 @@
 }
 
 .step-card h3 {
-  color: #333; /* Replace with actual color */
+  color: #473473; /* Replace with actual color */
   font-size: 30px;
-  letter-spacing: 1.2px;  
+  font-family: poppins;
+  letter-spacing: 1.2px;
   font-weight: 800; /* Adjust the size as needed */
 }
 .red-line {
@@ -56,6 +60,7 @@
 .step-card p {
   color: black; /* Replace with actual color */
   font-size: 1.5em;
+  font-family: poppins;
   font-weight: 500;
   text-align: center;
 }
