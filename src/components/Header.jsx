@@ -1,7 +1,7 @@
 import "./Header.css";
 import Logo from "../assets/images/logo.png";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-
+import { useNetwork } from "wagmi";
 import { Link } from "react-router-dom";
 import { useGetBalance } from "../hooks/useGetBalance";
 import { useAccount } from "wagmi";
@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 
 const Header = () => {
   const { address } = useAccount();
+  const { chain } = useNetwork();
   const [isConnected, setIsConnected] = useState(false);
   const _balance = Math.floor(useGetBalance(address));
   console.log("Balance:", _balance);
@@ -39,27 +40,28 @@ const Header = () => {
         </p>
       </div>
       <div className="header-button__container">
-        {_balance && isConnected ? (
-          <div className="balance-div">
-            <p className="balance">{_balance} GTM</p>
-            <img
-              className="icon"
-              src="mars-logo.png"
-              alt="Girl in a jacket"
-            ></img>
-          </div>
-        ) : (
-          <div className="balance-div">
-            <p className="balance">{_balance} GTM</p>
-            <img
-              className="icon"
-              src="mars-logo.png"
-              alt="Girl in a jacket"
-            ></img>
-          </div>
-        )}
+        {isConnected ? (
+          _balance > 0 ? (
+            chain?.name === "Polygon Mumbai" ? (
+              <div className="balance-div">
+                <p className="balance">{_balance} GTM</p>
+                <img
+                  className="icon"
+                  src="mars-logo.png"
+                  alt="Girl in a jacket"
+                />
+              </div>
+            ) : null
+          ) : (
+            <div class="loader">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          )
+        ) : null}
 
-        <ConnectButton  showBalance={false} chainStatus="icon" />
+        <ConnectButton showBalance={false} chainStatus="icon" />
       </div>
     </div>
   );

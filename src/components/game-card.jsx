@@ -2,12 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./game-card.css";
 import { Link } from "react-router-dom";
-
 import { useGetBalance } from "../hooks/useGetBalance";
 import { useAccount } from "wagmi";
+import { useNetwork } from "wagmi";
 
 const GameCard = ({ name, imageSrc, gameLink }) => {
   const { address } = useAccount();
+  const { chain } = useNetwork();
   console.log(address);
   const balance = useGetBalance(address);
   console.log("Balance:", balance);
@@ -17,7 +18,7 @@ const GameCard = ({ name, imageSrc, gameLink }) => {
       <div className="game-info">
         <span className="game-name">{name}</span>
       </div>
-      {balance >= 10000 ? (
+      {balance >= 10000 && chain?.name === "Polygon Mumbai" ? (
         <Link to="/game">
           <button className="play-button">Play</button>
         </Link>

@@ -33,17 +33,15 @@
   border-bottom-right-radius: 3px; 
 }
 .sidebar-icon {
-  font-size: 24px; /* Adjust the font size as needed */
-  width: 35px;
+  width: 24px;
   text-align: center;
   cursor: pointer;
-  margin-left: 20%;
+  margin-left: 30%;
 }
 .sidebar-icon-clicked{
-  font-size: 24px; /* Adjust the font size as needed */
-  width: 35px;
+  width: 24px;
   cursor: pointer;
-  margin-left: 14%;
+  margin-left: 25%;
 }
 
 .right-box{
