@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 const Header = () => {
   const { address } = useAccount();
   const [isConnected, setIsConnected] = useState(false);
-  const _balance = useGetBalance(address);
+  const _balance = Math.floor(useGetBalance(address));
   console.log("Balance:", _balance);
   useEffect(() => {
     // Check if the account address is available
@@ -34,23 +34,32 @@ const Header = () => {
         </a>
       </div>
       <div className="">
-        <p className={_balance && isConnected ? "middle-2" : "middle-1"}>THE SPACE STATION</p>
+        <p className={_balance && isConnected ? "middle-2" : "middle-1"}>
+          THE SPACE STATION
+        </p>
       </div>
       <div className="header-button__container">
         {_balance && isConnected ? (
           <div className="balance-div">
-            <p className="balance">{_balance}</p>
+            <p className="balance">{_balance} GTM</p>
             <img
-              className="sidebar-icon"
+              className="icon"
               src="mars-logo.png"
               alt="Girl in a jacket"
             ></img>
           </div>
         ) : (
-          <p className="balance"></p>
+          <div className="balance-div">
+            <p className="balance">{_balance} GTM</p>
+            <img
+              className="icon"
+              src="mars-logo.png"
+              alt="Girl in a jacket"
+            ></img>
+          </div>
         )}
 
-        <ConnectButton showBalance={false} chainStatus="icon" />
+        <ConnectButton  showBalance={false} chainStatus="icon" />
       </div>
     </div>
   );

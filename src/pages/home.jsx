@@ -18,26 +18,42 @@ const Home = () => {
       <div className="main-container">
         <aside className="sidebar">
           <div className="icon-box" onClick={() => handleClick("info")}>
-            <div className={activePage==="info"? "side-line" : ""}></div>
+            <div className={activePage === "info" ? "side-line" : ""}></div>
             <img
-               className={activePage==="info"? "sidebar-icon-clicked" : "sidebar-icon"}
-              src="home.svg"
+              className={
+                activePage === "info" ? "sidebar-icon-clicked" : "sidebar-icon"
+              }
+              src={
+                activePage === "info" ? "home-icon-black.svg" : "home-icon.svg"
+              }
               alt="Girl in a jacket"
             ></img>
           </div>
           <div className="icon-box" onClick={() => handleClick("game")}>
-            <div  className={activePage==="game"? "side-line" : ""}></div>
+            <div className={activePage === "game" ? "side-line" : ""}></div>
             <img
-               className={activePage==="game"? "sidebar-icon-clicked" : "sidebar-icon"}
-              src="game.svg"
+              className={
+                activePage === "game" ? "sidebar-icon-clicked" : "sidebar-icon"
+              }
+              src={
+                activePage === "game" ? "gamebar-black.svg" : "gamebar.svg"
+              }
               alt="Girl in a jacket"
             ></img>
           </div>
           <div className="icon-box" onClick={() => handleClick("leaderboard")}>
-            <div  className={activePage==="leaderboard"? "side-line" : ""}></div>
+            <div
+              className={activePage === "leaderboard" ? "side-line" : ""}
+            ></div>
             <img
-             className={activePage==="leaderboard"? "sidebar-icon-clicked" : "sidebar-icon"}
-              src="podium.svg"
+              className={
+                activePage === "leaderboard"
+                  ? "sidebar-icon-clicked"
+                  : "sidebar-icon"
+              }
+              src={
+                activePage === "leaderboard"
+                  ? "leaderboard-black.svg" : "leaderboard.svg" }
               alt="Girl in a jacket"
             ></img>
           </div>

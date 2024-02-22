@@ -9,7 +9,7 @@ import {
   getDefaultWallets,
 } from "@rainbow-me/rainbowkit";
 import { configureChains, createClient, mainnet, WagmiConfig } from "wagmi";
-import { polygonMumbai} from "wagmi/chains";
+import { polygonMumbai } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
@@ -38,10 +38,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider
-        chains={chains}
-        theme={darkTheme({ accentColor: "#377bff" })}
-      >
+      <RainbowKitProvider coolMode theme={darkTheme({ accentColor: "#377bff" })} chains={chains}>
         <QueryClientProvider client={new QueryClient()}>
           <App />
         </QueryClientProvider>
