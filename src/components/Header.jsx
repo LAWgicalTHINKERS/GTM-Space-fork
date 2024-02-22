@@ -2,7 +2,6 @@ import "./Header.css";
 import Logo from "../assets/images/logo.png";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 
-import { ethers } from "ethers";
 import { Link } from "react-router-dom";
 import { useGetBalance } from "../hooks/useGetBalance";
 import { useAccount } from "wagmi";
@@ -26,13 +25,17 @@ const Header = () => {
   }, [address, _balance]); // Run this effect whenever address or balance changes
 
   return (
-    <header className="header-container">
-      <a target="_blank" rel="noreferrer">
-        <Link to="/home">
-          <img src={Logo} alt="Morty Logo" className="logo" />
-        </Link>
-      </a>
-      <p className="middle">THE SPACE STATION</p>
+    <div className="header-container">
+      <div className="">
+        <a target="_blank" rel="noreferrer">
+          <Link to="/home">
+            <img src={Logo} alt="Morty Logo" className="logo" />
+          </Link>
+        </a>
+      </div>
+      <div className="">
+        <p className="middle">THE SPACE STATION</p>
+      </div>
       <div className="header-button__container">
         {_balance && isConnected ? (
           <div className="balance-div">
@@ -49,7 +52,7 @@ const Header = () => {
 
         <ConnectButton showBalance={false} chainStatus="icon" />
       </div>
-    </header>
+    </div>
   );
 };
 

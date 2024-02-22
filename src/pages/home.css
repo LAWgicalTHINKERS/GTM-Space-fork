@@ -58,18 +58,38 @@
   padding-top: 20px; /* Space at the top */
 }
 
+.icon-box{
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  padding-bottom: 10px;
+}
+.side-line{
+  border: 3px solid black;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px; 
+}
 .sidebar-icon {
-  color: #61dafb; /* Adjust the color as needed */
   font-size: 24px; /* Adjust the font size as needed */
-  width: 24px;
+  width: 40px;
+  opacity: 0.5;
   margin-top: 5px;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+  padding-left: 10px;
+}
+.sidebar-icon-clicked{
+  font-size: 24px; /* Adjust the font size as needed */
+  width: 40px;
+  opacity: 1;
+  margin-top: 5px;
+  cursor: pointer;
+  padding-left: 10px;
 }
 
 .sidebar-icon:hover {
-  transform: scale(1.2);
+  
 }
+
 
 .header-button__container
 [data-testid="rk-connect-button"]:is(::before, ::after) {
@@ -81,8 +101,6 @@ background-color: var(--connect-wallet-hover-color);
 transform: scale(1);
 }
 
-.icon{
-  width: 24px;
-}
+
 
 

@@ -11,6 +11,10 @@
 .back-button .icon{
   width: 95%;
   height: 80%;
+  opacity: 0.8;
+}
+.back-button .icon:hover{
+  opacity: 1;
 }
 .game-page-container {
   position: relative;
