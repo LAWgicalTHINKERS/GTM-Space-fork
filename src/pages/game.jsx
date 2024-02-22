@@ -23,7 +23,11 @@ const GamePage = ({ gameName, gameLink }) => {
     const handleMessage = async (event) => {
       console.log("Event:", event);
       // Check if the message is from the iframe
-      // if (event.source !== window) return;
+      if (event.origin !== "https://65d4a69550dc11dc25f57e83--bespoke-kelpie-d28194.netlify.app") {
+        console.log("Received message from untrusted origin:", event.origin);
+        return; // Ignore messages from untrusted origins
+      }
+      console.log("Received message from trusted origin:", event.origin);
       console.log("INITIALISED");
       // if(address==null||balance<10000){
       //   alert("Ineligible to play")
