@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { IoIosArrowBack } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { addUserScore } from "../hooks/setScore.js";
 import {
   getSingleUserScore,
@@ -9,11 +9,12 @@ import {
 import "./game.css";
 import { useGetBalance } from "../hooks/useGetBalance";
 import { useAccount } from "wagmi";
-const GamePage = ({ gameName, gameLink }) => {
+const GamePage = () => {
+  const location = useLocation();
+  const { gameLink, scoreWeight } = location.state;
   const { address } = useAccount();
   const GameID = 1;
   const balance = useGetBalance(address);
-  console.log("Balance:", balance);
 
   // if(address==null||balance<10000){
   //   alert("Ineligible to play")
@@ -23,7 +24,7 @@ const GamePage = ({ gameName, gameLink }) => {
     const handleMessage = async (event) => {
       console.log("Event:", event);
       // Check if the message is from the iframe
-      if (event.origin !== "https://65d4a69550dc11dc25f57e83--bespoke-kelpie-d28194.netlify.app") {
+      if (event.origin !== gameLink) {
         console.log("Received message from untrusted origin:", event.origin);
         return; // Ignore messages from untrusted origins
       }
@@ -40,14 +41,14 @@ const GamePage = ({ gameName, gameLink }) => {
       if (scoreData !== undefined) {
         // Log the received score
         console.log("Received score from iframe:", scoreData);
-
         if (scoreData > 0) {
           let prevScore = await getSingleUserScore(address);
           // let prevScore = 0;
           console.log("Prev score found ", prevScore);
-          if (prevScore < scoreData) {
+          let   finalScore = scoreData * scoreWeight;
+          if (prevScore < finalScore) {
             await deleteSingleUserScore(address);
-            await addUserScore(GameID, address, scoreData);
+            await addUserScore(GameID, address, finalScore);
           } else {
             console.log("Not a highest score");
           }
@@ -71,11 +72,7 @@ const GamePage = ({ gameName, gameLink }) => {
         <Link to="/home" className="back-button">
           <img src="back.svg" className="icon" alt="" />
         </Link>
-        <iframe
-          className="game-iframe"
-          title="Game"
-          src="https://65d4a69550dc11dc25f57e83--bespoke-kelpie-d28194.netlify.app/"
-        />
+        <iframe className="game-iframe" title="Game" src={gameLink} />
       </div>
     </>
   );

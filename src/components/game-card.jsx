@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 import { useGetBalance } from "../hooks/useGetBalance";
 import { useAccount } from "wagmi";
 import { useNetwork } from "wagmi";
+import speedbounceimg from "../assets/images/SpeedBounce.webp";
 
-const GameCard = ({ name, imageSrc, gameLink }) => {
+const GameCard = ({ name, imageSrc, gameLink, scoreWeight }) => {
   const { address } = useAccount();
   const { chain } = useNetwork();
-  console.log(address);
   const balance = useGetBalance(address);
-  console.log("Balance:", balance);
+
   return (
     <div className="game-card">
       <img src={imageSrc} alt={name} className="game-image" />
@@ -19,12 +19,12 @@ const GameCard = ({ name, imageSrc, gameLink }) => {
         <span className="game-name">{name}</span>
       </div>
       {balance >= 10000 && chain?.name === "Polygon Mumbai" ? (
-        <Link to="/game">
+        <Link to="/game" state={{ gameLink, scoreWeight }}>
           <button className="play-button">Play</button>
         </Link>
       ) : (
         <div className="need-tokens">
-          You need atleast 10000 GTM tokens to play
+          You need at least 10000 GTM tokens to play
         </div>
       )}
     </div>

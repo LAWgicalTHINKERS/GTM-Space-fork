@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
-
   apiKey: "AIzaSyDNT6boX6SzM60b4hrigplhDiwL8gpVNvc",
   authDomain: "gtm-space.firebaseapp.com",
   projectId: "gtm-space",
