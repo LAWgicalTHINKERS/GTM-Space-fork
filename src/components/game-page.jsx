@@ -5,6 +5,8 @@ import speedbounceimg from "../assets/images/SpeedBounce.webp";
 import randombounceimg from "../assets/images/RandomBounce.webp";
 import brickbounceimg from "../assets/images/BrickGame.webp";
 import spaceclashimg from "../assets/images/SpaceClash.webp";
+import snakeimg from "../assets/images/snake.webp"
+import pacmanimg from "../assets/images/pacman.webp"
 const GamePage = () => {
   const games = [
     {
@@ -30,6 +32,18 @@ const GamePage = () => {
       imageSrc: brickbounceimg,
       gameLink: "https://brickbounce.vercel.app",
       scoreWeight: 10,
+    },
+    {
+      name: "Snake",
+      imageSrc: snakeimg,
+      gameLink: "https://snake-game-pi-gilt.vercel.app",
+      scoreWeight: 20,
+    },
+    {
+      name: "Pacman",
+      imageSrc: pacmanimg,
+      gameLink: "https://pacman-theta.vercel.app",
+      scoreWeight: 20,
     },
   ];
 
