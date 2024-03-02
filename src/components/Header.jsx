@@ -41,7 +41,7 @@ const Header = () => {
       </div>
       <div className="header-button__container">
         {isConnected ? (
-          _balance > 0 ? (
+          _balance >= 0 ? (
             chain?.name === "Polygon Mumbai" ? (
               <div className="balance-div">
                 <p className="balance">{_balance} GTM</p>
